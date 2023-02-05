@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nawslcabs">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/taji_cabs_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/taji_cabs_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.nawslcabs.app.App"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.nawslcabs.app.Welcome"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.auth.SignUp"
+            android:parentActivityName="com.nawslcabs.app.Welcome"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.auth.ForgotPassword"
+            android:parentActivityName="com.nawslcabs.auth.SignIn"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.auth.SignIn"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.home.Home"
+            android:theme="@style/AppTheme.HomeStyle" />
+        <activity
+            android:name="com.nawslcabs.app.OnBoardingUI"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.settings.ContactUs"
+            android:parentActivityName="com.nawslcabs.home.Home"
+            android:theme="@style/AppTheme.GreenTop" />
+        <activity
+            android:name="com.nawslcabs.settings.UserProfile"
+            android:parentActivityName="com.nawslcabs.settings.Settings"
+            android:theme="@style/AppTheme.GreenTop" />
+        <activity
+            android:name="com.nawslcabs.settings.PrivacyPolicy"
+            android:parentActivityName="com.nawslcabs.settings.Settings"
+            android:theme="@style/AppTheme.GreenTop" />
+        <activity
+            android:name="com.nawslcabs.settings.Settings"
+            android:parentActivityName="com.nawslcabs.home.Home"
+            android:theme="@style/AppTheme.GreenTop" />
+        <activity
+            android:name="com.nawslcabs.trips.TripsActivity"
+            android:parentActivityName="com.nawslcabs.home.Home"
+            android:theme="@style/AppTheme.GreenTop" />
+        <activity android:name="com.nawslcabs.settings.TermsAndConditions"
+            android:theme="@style/AppTheme.GreenTop"
+            android:parentActivityName="com.nawslcabs.auth.SignUp"/>
+
+        <!--             OLD SCREENS                  -->
+        <activity
+            android:name="com.nawslcabs.passengers.ProfileActivity"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.passengers.BasicActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nawslcabs.configuration.StartApp"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name="com.nawslcabs.passengers.PassengerHome"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.Sliding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nawslcabs.passengers.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/MapsActionBar" />
+        <activity
+            android:name="com.nawslcabs.passengers.SignUpActivity"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+        <activity
+            android:name="com.nawslcabs.passengers.SignInActivity"
+            android:theme="@style/AppTheme.TajiNoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+
+        <service
+            android:name="com.nawslcabs.services.MessagingServices"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+<service
+            android:name=".service.TajiInstanceService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/taji_cabs_foreground" />
+    </application>
+
+</manifest>

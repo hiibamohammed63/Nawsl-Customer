@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">نوصل</string>
+    <string name="forgotPassword">هل نسيت كلمة المرور؟</string>
+    <string name="fname_placeholder">الاسم الاول</string>
+    <string name="lname_placeholder">الاسم الاخير</string>
+    <string name="phone_number_placeholder">رقم الهاتف المحمول</string>
+    <string name="confirm_password_placeholder">تأكيد كلمة المرور</string>
+    <string name="email_placeholder">البريد الإلكتروني</string>
+    <string name="email_hint">البريد الإلكتروني</string>
+    <string name="password_placeholder">كلمة المرور</string>
+
+
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading">Authenticating</string>
+    <string name="in_use">تمّ استخدام هذا البريد الإلكتروني مسبقًا</string>
+
+    // Sign In Activity
+    <string name="sign_in_text">سجل الدخول في حساب نوصل الخاص بك</string>
+    <string name="welcome_taji">مرحبا بك في نوصل</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="accountSignUp">ليس لديك حساب؟ أنشئ حساب</string>
+    <string name="about_taji">عن نوصل كابتن</string>
+    <string name="auth_failed">تعذر توثيق الحساب.</string>
+
+    // Sign Up Activity
+    <string name="taji_registration">أنشئ حسابا في نوصل </string>
+    <string name="sign_up_text">سجل الآن للحصول على حساب نوصل كابتن</string>
+    <string name="first_name">الاسم الأول</string>
+    <string name="last_name">الاسم الأخير</string>
+    <string name="accountSignIn">العودة الى تسجيل الدخول</string>
+    <string name="id_number">رقم التحقق</string>
+    <string name="sign_up">التسجيل</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="reg_failed">تعذر إنشاء الحساب حاول مرة أخرى في وقت لاحق</string>
+    <string name="err_500">هناك خطأ ما حاول مرة أخرى في وقت لاحق</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="title_activity_maps">نوصل كابتن</string>
+
+    // Home Activity
+    <string name="menu_home">الرئيسية</string>
+    <string name="menu_gallery">المحفظة</string>
+    <string name="menu_slideshow">البطاقة</string>
+    <string name="menu_tools">الأدوات</string>
+    <string name="menu_share">مشاركة</string>
+    <string name="menu_send">ارسال</string>
+    <string name="default_info_title">الموقع الإفتراضي</string>
+    <string name="default_info_snippet">لم يتم العثور</string>
+    <string name="pick_place">حدد الموقع</string>
+    <string name="hello">مرحبا</string>
+    <string name="follow">متابعة</string>
+    <string name="title_activity_passenger_home">الركاب</string>
+    <string name="pick_up">حدد نقطة الإنطلاق</string>
+    <string name="destination">حدد الوجهه المطلوبة</string>
+    <string name="book_ride">احجز مشوارك</string>
+    <string name="origin">من:</string>
+    <string name="dest">الى:</string>
+    <string name="request_ride">طلب مشوار</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="fcm_message">Firebase Cloud Message</string>
+    <string name="cancel_request">الغاء الطلب</string>
+    <string name="find_driver">ابحث عن كابتن بالقرب منك</string>
+    <string name="create_account">أنشئ حسابا</string>
+
+    <string name="password_hint">********</string>
+    <string name="vehicle_make_placeholder">معلومات السيارة</string>
+    <string name="vehicle_reg_placeholder">رخصة السيارة</string>
+    <string name="terms_and_conditions">الموافقة على السياسة والشروط</string>
+    <string name="t_and_c"><![CDATA[Terms & Conditions]]></string>
+    <string name="forgot_password_text">هل نسيت بريدك الإلكتروني / كلمة المرور؟ فقط أدخل بريدك الإلكتروني وستكون على بعد نقرة واحدة من إعادة تعيين كلمة مرورك</string>
+    <string name="reset_account">إعادة تعيين</string>
+    <string name="recovery_success">تم إعادة البريد الإلكتروني بنجاح</string>
+    <string name="where_would_you_like_to_go">إلى أين؟</string>
+    <string name="your_driver_is_on_their_way">في الطريق إليك...</string>
+    <string name="end_trip_pop_up_text">هنا المبلغ الإجمالي المستحق للمشوار</string>
+    <string name="ksh">SDG</string>
+    <string name="_0000">0000</string>
+    <string name="hello_first_name">مرحبا, الاسم الأول</string>
+    <string name="welcome_long_text">تم إنشاء حسابك في نوصل بنجاح..</string>
+    <string name="finish_setup">تم بنجاح</string>
+    <string name="settings">الإعدادات</string>
+    <string name="terms_privacy_policy">سياسة الخصوصية</string>
+    <string name="my_profile">الملف الشخصي</string>
+    <string name="personal_information">المعلومات الشخصية</string>
+    <string name="my_trips">رحلاتي</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="sign_out">تسجيل الخروج</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="where_from">موقعك?</string>
+    <string name="where_to">إلى أين؟</string>
+    <string name="driver_name_placeholder">عبد اللطيف محمود</string>
+    <string name="your_taxi_is_on_the_way">السيارة الخاصة بك في الطريق إليك</string>
+    <string name="car_type">نوع السيارة</string>
+    <string name="car_type_example">تويوتا فيلدار - أبيض</string>
+    <string name="vehicle_details">معلومات السيارة</string>
+    <string name="driver_image">الصورة الشخصية</string>
+    <string name="vehicle_exmaple_reg">KCY 014E</string>
+    <string name="reason_for_cancelling_request">سبب إلغاء الطلب</string>
+    <string name="radio_text_1">يتعذر الحصول على كابتن</string>
+    <string name="radio_text_2">تم الغاء الطلب من الكابتن</string>
+    <string name="radio_text_3">استغرق الكابتن وقتا طويلا للوصول</string>
+    <string name="radio_text_4">سبب آخر</string>
+    <string name="dismiss">إلغاء</string>
+</resources>

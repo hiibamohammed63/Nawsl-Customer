@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="270dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/locationBlock"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textSize="@dimen/dim_15"
+                android:background="#ffffff"
+                android:fontFamily="@font/cairo"
+
+                android:text="إبدأ مشوارك اليوم" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/textPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="@dimen/dim_10"
+                android:background="@drawable/borderline"
+                android:textSize="@dimen/dim_15"
+                android:fontFamily="@font/cairo"
+                android:hint="حدد نقطة الإنطلاق" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:background="#ffffff"
+                android:text="الإلتقاء" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="@dimen/dim_20"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/textDropOff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="@dimen/dim_10"
+                android:background="@drawable/borderline"
+                android:textSize="@dimen/dim_15"
+                android:hint="حدد نقطة الوصول" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:background="#ffffff"
+                android:text="الإنزال" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/requestBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:text="اطلب مشوارك" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/fromDisp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:text="من الواحة" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/toDisp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:text="إلى بحري" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="6"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingEnd="@dimen/dim_10"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_10"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingEnd="@dimen/dim_10"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Distance Covered" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dim_10"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/distanceCovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:paddingEnd="@dimen/dim_05"
+                        android:paddingStart="@dimen/dim_05"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dim_40"
+                        android:text="14.5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:paddingEnd="@dimen/dim_05"
+                        android:paddingStart="@dimen/dim_05"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dim_20"
+                        android:text="Km" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingEnd="@dimen/dim_10"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_10"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingEnd="@dimen/dim_10"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/cairo"
+                        android:text="تكلفة المشوار" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:paddingEnd="@dimen/dim_05"
+                        android:paddingStart="@dimen/dim_05"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dim_20"
+                        android:text="KSh" />
+
+                    <TextView
+                        android:id="@+id/costDisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:paddingEnd="@dimen/dim_05"
+                        android:paddingStart="@dimen/dim_05"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dim_40"
+                        android:text="0000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/requestRide"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/request_ride"
+                android:fontFamily="@font/cairo"
+                android:layout_gravity="center"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/driverBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:fontFamily="@font/cairo"
+                android:text="Your driver is on their way..." />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                android:fontFamily="@font/cairo"
+                android:text="من الواحة" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/driverPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                android:fontFamily="@font/cairo"
+                android:text="من الواحة" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/vehicleReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                android:fontFamily="@font/cairo"
+                android:text="إلى بحري" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_10"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginBottom="@dimen/dim_20"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/vehicleMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingEnd="@dimen/dim_05"
+                android:paddingStart="@dimen/dim_05"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp"
+                android:fontFamily="@font/cairo"
+                android:text="إلى بحري" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancelRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@color/error"
+                android:fontFamily="@font/cairo"
+                android:text="@string/cancel_request"
+
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

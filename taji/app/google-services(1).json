@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "756112108994",
+    "project_id": "nawsl-cabs",
+    "storage_bucket": "nawsl-cabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756112108994:android:6e8e26a247c2ec3922ba5b",
+        "android_client_info": {
+          "package_name": "com.nawslcabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756112108994-nhdgb8l3hikctgings6ni50r6m8ghhvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrPTeScwwJ-TFhe2uiWuhqAPdzjsmcZy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756112108994-nhdgb8l3hikctgings6ni50r6m8ghhvs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

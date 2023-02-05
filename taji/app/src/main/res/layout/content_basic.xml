@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_grey"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="144dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <fragment android:id="@+id/places_pick_up"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:visibility="invisible"
+                android:layout_height="72dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <fragment android:id="@+id/place_destination"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:visibility="invisible"
+                android:layout_height="72dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/block_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_grey"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/dim_05"
+                        android:paddingLeft="@dimen/dim_05"
+                        android:paddingTop="@dimen/dim_20"
+                        android:paddingBottom="@dimen/dim_20"
+                        android:weightSum="5" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/dim_20"
+                            android:layout_marginEnd="@dimen/dim_20"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_20"
+                            android:layout_marginBottom="@dimen/dim_00"
+                            android:text="@string/origin"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/origin_place"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/dim_20"
+                            android:layout_marginEnd="@dimen/dim_20"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_20"
+                            android:layout_marginBottom="@dimen/dim_00"
+                            android:text="@string/origin"
+                            tools:ignore="SpUsage" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/dim_05"
+                        android:paddingLeft="@dimen/dim_05"
+                        android:paddingTop="@dimen/dim_20"
+                        android:paddingBottom="@dimen/dim_20"
+                        android:weightSum="5" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/dim_20"
+                            android:layout_marginEnd="@dimen/dim_20"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_20"
+                            android:layout_marginBottom="@dimen/dim_00"
+                            android:text="@string/dest"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/dest_place"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="start"
+                            android:layout_marginStart="@dimen/dim_20"
+                            android:layout_marginEnd="@dimen/dim_20"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_20"
+                            android:layout_marginBottom="@dimen/dim_00"
+                            android:text="@string/origin"
+                            tools:ignore="SpUsage" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/request_ride"
+                        android:layout_width="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:textColor="@android:color/white"
+                        android:padding="@dimen/dim_05"
+                        android:text="@string/request_ride"
+                        android:layout_gravity="center"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

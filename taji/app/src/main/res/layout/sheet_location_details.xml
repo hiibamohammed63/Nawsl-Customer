@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sheet_location_details"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="230dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:background="@drawable/top_corner_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingEnd="@dimen/dim_10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/dim_10"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingEnd="@dimen/dim_05"
+                    android:paddingStart="@dimen/dim_05"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dim_15"
+                    android:background="#0777008D"
+                    android:text="@string/where_would_you_like_to_go"
+                    android:fontFamily="@font/cairo"
+                    tools:ignore="SpUsage" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/dim_10"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                tools:ignore="MissingConstraints">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dim_05"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/icon_my_location" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="60dp"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingEnd="@dimen/dim_00"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/textPickUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:padding="@dimen/dim_10"
+                        android:textSize="@dimen/dim_15"
+                        android:hint="من أين؟"
+                        tools:ignore="SpUsage"
+                        android:importantForAutofill="no" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="0dp"
+                        android:paddingEnd="@dimen/dim_05"
+                        android:paddingStart="@dimen/dim_05"
+                        android:background="#ffffff"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/cairo"
+                        android:text="الإلتقاء" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="@dimen/dim_30"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/dim_10"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                tools:ignore="MissingConstraints">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dim_05"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/icon_end_location" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="60dp"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingEnd="@dimen/dim_00"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/textDropOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:padding="@dimen/dim_10"
+                        android:textSize="@dimen/dim_15"
+                        android:hint="@string/where_to"
+                        tools:ignore="SpUsage" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="0dp"
+                        android:paddingEnd="@dimen/dim_05"
+                        android:paddingStart="@dimen/dim_05"
+                        android:background="#ffffff"
+                        android:textColor="@color/error"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/cairo"
+                        android:text="الإنزال" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
